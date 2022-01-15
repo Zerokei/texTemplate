@@ -1,2 +1,0 @@
-# texTemplate
-My texTemplate
