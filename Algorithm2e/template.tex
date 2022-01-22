@@ -1,0 +1,62 @@
+% Reference: https://zhuanlan.zhihu.com/p/166418214
+
+\documentclass{article}
+%           linesnumbered -> number line
+%                          ruled -> outline on the top
+\usepackage[linesnumbered, ruled]{algorithm2e}
+%           Enable the do-while structure
+\SetKwRepeat{Do}{do}{while}
+
+\begin{document}
+
+\begin{algorithm}
+    % caption
+    \caption{How to write algorithm}
+    % Data
+    \KwData{this text}
+    % Result
+    \KwResult{how to write algorithm with \LaTeX2e}
+    \While{not at end of this document}{
+        read current\;
+        %   if
+        \If{understand}{
+            you are good\;
+        }
+        %   if inline
+        \lIf{understand}{you are good}
+        %   repeat-until
+        \Repeat{this end condition}{
+            do these things\;
+        }
+        %   if-else
+        \eIf{understand}{
+            go to next section\;
+            current section becomes this one\;
+        }{
+            go back to the beginning of current section\;
+        }
+        %   do-while
+        \Do{this end condition}{
+            do these things\;
+        }
+        %   for
+        \For{i=1:n}{
+            do something\;
+        }
+        %   comment //
+        \tcp{this is a comment}
+        %   if-elif-else
+        \uIf{understand a}{
+            do something
+            %   comment /**/
+            \tcc*{this is comment}
+        }
+        \uElseIf{understand b}{
+            do something\;
+        }\Else{
+            do nothing\;
+        }
+    }
+\end{algorithm}
+
+\end{document}
