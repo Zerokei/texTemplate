@@ -1,0 +1,55 @@
+\documentclass{article}
+% \usepackage{ctex}
+\usepackage[heading=true]{ctex} %中文报告可以用这个，section将会居中
+
+%% Language and font encodings
+
+\usepackage{fancyhdr} % 页眉页脚
+\usepackage{graphicx} % 图片
+\usepackage{listings} % 代码块
+%% 代码块效果
+\usepackage{xcolor}
+\lstset{
+    numbers=left, 
+    numberstyle= \tiny, 
+    keywordstyle= \color{ blue!70},
+    commentstyle= \color{red!50!green!50!blue!50}, 
+    frame=shadowbox, % 阴影效果
+    rulesepcolor= \color{ red!20!green!20!blue!20} ,
+    escapeinside=``, % 英文分号中可写入中文
+    xleftmargin=2em,xrightmargin=2em, aboveskip=1em,
+    framexleftmargin=2em
+}
+
+%% Sets page size and margins
+\usepackage[a4paper,top=3cm,bottom=2cm,left=3cm,right=3cm,marginparwidth=1.75cm]{geometry}
+
+%% Useful packages
+\usepackage{amsmath}
+\usepackage[colorinlistoftodos]{todonotes}
+\usepackage[colorlinks=true, allcolors=black]{hyperref}
+
+%% 页眉页脚设置
+\pagestyle{fancy} 
+\lhead{\CourseName{}: \@title} %页眉设置
+\lfoot{} %显示页码
+
+%% 一些个人信息
+\input{info/info.tex}
+
+%% 文章内容
+\begin{document}
+\sloppy %自动换行
+%% 封面
+\input{title/title.tex}
+
+%% 目录
+\tableofcontents
+\setcounter{page}{0}
+\thispagestyle{empty} % 当前页不显示页码
+
+%% 正文
+\input{body/chapter1.tex}
+\input{body/chapter2.tex}
+
+\end{document}

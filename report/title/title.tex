@@ -1,0 +1,28 @@
+\begin{titlepage}
+
+    \newcommand{\HRule}{\rule{\linewidth}{0.5mm}} % Defines a new command for the horizontal lines, change thickness here
+    
+    % Logo
+    \centering
+    \includegraphics[width=8cm]{title/logo.png}\\[1cm] % Include a department/university logo - this will require the graphicx package
+     
+    
+    \begin{center} % Center everything on the page
+    
+    \textsc{\LARGE Technical Report}\\[2.0cm] 
+    \textsc{\Large \CourseName{}}\\[0.5cm] 
+    \end{center}
+    \makeatletter
+    \HRule \\[0.4cm]
+    { \huge \bfseries \@title}\\[0.4cm] % Title of your document
+    \HRule \\[2.5cm]
+    
+    %% personal information
+    \begin{center}
+    \emph{Author:} \@author\\[0.2cm] % Your name
+    \emph{Studnet Id:} \StudentId{}\\[0.2cm]
+    \emph{Date:} \today\\[2cm] % Date, change the \today to a set date if you want to be precise
+    \end{center}
+
+    \vfill % Fill the rest of the page with whitespace
+\end{titlepage}
