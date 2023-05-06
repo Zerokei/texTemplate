@@ -32,13 +32,20 @@
 \usepackage[colorinlistoftodos]{todonotes}
 \usepackage[colorlinks=true, allcolors=black]{hyperref}
 
+%% 图片引用设置
+
+\newcommand{\customref}[1]{\hyperref[#1]{\textcolor{blue!70}{\textbf{\ref*{#1}}}}}
+
 %% 页眉页脚设置
 \pagestyle{fancy} 
 \lhead{\CourseName{}: \Title{}} %页眉设置
 \lfoot{} %显示页码
 
 %% 一些个人信息
-\input{info/info.tex}
+\author{Your name} % your name
+\newcommand{\Title}{Title} % the title of report
+\newcommand{\CourseName}{Your Couse Name} % your course name
+\newcommand{\StudentId}{Your Student Id}  % your student id
 
 %% 文章内容
 \begin{document}
@@ -52,7 +59,6 @@
 \thispagestyle{empty} % 当前页不显示页码
 
 %% 正文
-\input{body/chapter1.tex}
-\input{body/chapter2.tex}
+\input{body/body.tex}
 
 \end{document}
