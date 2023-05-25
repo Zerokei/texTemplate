@@ -6,10 +6,20 @@ wow wow wow wow wow wow wow
 \par
 new paragraph
 \\
-\begin{figure}[h] % h:放置在当前位置
+\begin{figure}[!hbtp] % h:放置在当前位置
     \centering
     \includegraphics[width=8cm]{title/logo.png} %图片大小，图片路径
     \caption{picture demo}           %图片名称
+\end{figure}
+
+\begin{figure}[!hbtp]
+    \centering
+    \begin{subfigure}[b]{0.5\linewidth}
+        \includegraphics[width=0.8\linewidth]{title/logo.png}
+    \end{subfigure}
+    \begin{subfigure}[b]{0.5\linewidth}
+        \includegraphics[width=0.8\linewidth]{title/logo.png}
+    \end{subfigure}
 \end{figure}
 
 \verb|puts("wow")| % 行间代码
